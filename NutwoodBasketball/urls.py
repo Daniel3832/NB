@@ -18,10 +18,15 @@ from django.conf.urls import url
 from django.contrib import admin
 from rest_framework.urlpatterns import format_suffix_patterns
 from players import views
+#from django.urls import include, path
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^players/index', views.index, name='index'),
+    url(r'^players/detail', views.detail, name='detail'),
     url(r'^players/', views.PlayerList.as_view()),
+
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

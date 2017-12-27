@@ -18,6 +18,14 @@ class Team(models.Model):
     location = models.CharField(max_length=200)
 
 
+class Game(models.Model):
+    game_name= models.CharField(max_length=200)
+    mvp = models.CharField(max_length=200)
+
+
+
+
+
 
 
 
